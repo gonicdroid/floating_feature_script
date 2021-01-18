@@ -1,17 +1,14 @@
 # CHANGE FLOATING_FEATURE.XML USING RECOVERY
-### A very simple shell script for add lines in floating_features.xml
+## A very simple shell script for add lines in floating_features.xml
 
 It's made to use with AROMA installer, because it reads a prop file (in this case, from /tmp/aroma/fting.prop) to know if add or not the feature line
 You can change it to use for your purpose!
-
-Note: make sure to use a UNIX text file, if you use a Windows formatted one, the recovery can't read the script!. You can download the script of this repo to dont fight with that problem.
-
+<li>Note: make sure to use a UNIX text file, if you use a Windows formatted one, the recovery can't read the script!. You can download the script of this repo to dont fight with that problem.
 
 ### The shell script
 ``` go
 #!/sbin/sh
 # Written by Gonic
-
 floatingpath=/vendor/etc/floating_feature.xml 	# Your ROM floating file
 si=1 	# the value of the prop that allows the line to be written
 
@@ -44,7 +41,12 @@ fi
 echo '</SecFloatingFeatureSet>' >> $floatingpath # Finish the XML file again
 exit 0
 ```
-#### For start it from updater script, u need to extract it first, then give it the permissions and finally run it
+### A prop file example:
+``` go
+navbar=0
+highperformance=1
+```
+### For start it from updater script, u need to extract it first, then give it the permissions and finally run it
 For example:
 ``` go
 package_extract_dir("META-INF/scripts", "/tmp");
