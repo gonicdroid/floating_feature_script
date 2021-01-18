@@ -1,4 +1,4 @@
-# CHANGE FLOATING_FEATURE.xml USING RECOVERY
+# CHANGE FLOATING_FEATURE.XML USING RECOVERY
 ### A very simple shell script for add lines in floating_features.xml
 
 It's made to use with AROMA installer, because it reads a prop file (in this case, from /tmp/aroma/fting.prop) to know if add or not the feature line
