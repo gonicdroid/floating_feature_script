@@ -1,7 +1,7 @@
 #!/sbin/sh
 # Written by Gonic
 
-PROPERTY_FILE=/vendor/fting.prop 				# File where the props are stored
+PROPERTY_FILE=/tmp/aroma/fting.prop 				# File where the props are stored
 floatingpath=/vendor/etc/floating_feature.xml 	# Your ROM floating file
 si=1 											# the value of the prop that allows the line to be written
 
