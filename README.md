@@ -74,3 +74,20 @@ fi
 echo '</SecFloatingFeatureSet>' >> $floatingpath # Finish the XML file again
 exit 0
 ```
+
+#####Example:
+``` go
+// create functions that runs the echo, grep, and wc shell commands
+echo := sh.Cmd("echo")
+grep := sh.Cmd("grep")
+wc := sh.Cmd("wc")
+	
+// run echo, pipe the output through grep and then through wc
+// effectively the same as
+// $ echo Hi there! | grep -o Hi | wc -w
+fmt.Print(sh.Pipe(echo("Hi there!"), grep("-o", "Hi"), wc("-w")))
+```	
+#####Output:
+```
+1
+```
