@@ -6,7 +6,7 @@ You can change it to use for your purpose!
 
 Note: make sure to use a UNIX text file, if you use a Windows formatted one, the recovery can't read the script!. You can download the script of this repo to dont fight with that problem.
 
-```
+``` go
 #!/sbin/sh
 # Written by Gonic
 
